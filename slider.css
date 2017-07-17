@@ -1,0 +1,43 @@
+*{
+   margin-left: 50px;
+   margin-top: 50px;
+}
+input[type="range"]{
+   -webkit-appearance: none;
+   overflow: hidden;
+   width: 200px;
+   height: 20px;
+   outline: none;      /* 避免點選會有藍線或虛線 */
+   background:none;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+   -webkit-appearance: none;
+   position: relative;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: #f22;
+   transition: .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:before,
+input[type="range"]::-webkit-slider-thumb:after{
+   position: absolute;
+   top: 3px;
+   width: 2000px;
+   height: 4px;
+   content: "";
+   pointer-events: none;
+   transition: .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:before{
+   left: -1997px;
+   background: #f22;
+}
+
+input[type="range"]::-webkit-slider-thumb:after{
+   left: 10px;
+   background: #edc;
+}
